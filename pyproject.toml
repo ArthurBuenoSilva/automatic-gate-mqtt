@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+exclude = '''
+(?x)
+(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | venv
+    | .venv
+    | _build
+    | build
+    | buck-out
+    | \.flake8
+    | app[\\/]fuzzy_pd[\\/]fuzzy\.py$
+)
+'''
+
+[tool.isort]
+profile = "black"
